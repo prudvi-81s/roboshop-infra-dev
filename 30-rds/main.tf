@@ -11,7 +11,7 @@ module "db" {
   db_name  = "transactions"
   username = "root"
   manage_master_user_password = false
-  password = "roboshop1"
+  password = "RoboShop1"
   port     = "3306"
 
   vpc_security_group_ids = [local.mysql_sg_id]
@@ -68,7 +68,7 @@ module "records" {
   records = [
     
     {
-      name    = "mysql-${var.environment}" #mysql-dev.daws81s.online
+      name    = "mysql-${var.environment}" #mysql-dev.paws81s.online
       type    = "CNAME"
       ttl     = 1
       records = [
